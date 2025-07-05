@@ -3,4 +3,24 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
+# Настройки для работы с приватными ключами
+# Приватный ключ будет загружаться из переменной окружения PRIVATE_KEY
+# RPC URL будет загружаться из переменной окружения RPC_URL
+
+# Настройки для Base network (используем Etherscan API v2 для верификации)
+[profile.base]
+rpc_url = "${RPC_URL}"
+private_key = "${PRIVATE_KEY}"
+chain_id = 8453
+etherscan_api_key = "${ETHERSCAN_API_KEY}"
+etherscan_api_url = "https://api.etherscan.io/v2"
+
+# Настройки для Base Sepolia (testnet)
+[profile.base-sepolia]
+rpc_url = "${RPC_URL}"
+private_key = "${PRIVATE_KEY}"
+chain_id = 84532
+etherscan_api_key = "${ETHERSCAN_API_KEY}"
+etherscan_api_url = "https://api.etherscan.io/v2"
+
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
