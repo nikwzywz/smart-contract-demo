@@ -3,6 +3,13 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
+# Ремаппинги для зависимостей
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "forge-std/=lib/forge-std/src/"
+]
+via_ir = true
+
 # Настройки для работы с приватными ключами
 # Приватный ключ будет загружаться из переменной окружения PRIVATE_KEY
 # RPC URL будет загружаться из переменной окружения RPC_URL
